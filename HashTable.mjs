@@ -12,7 +12,7 @@ class HashData {
 // 따라서 hashFunction의 성능에 따라 HashTable의 성능이 달라질 수 있음
 class HashTable {
   constructor() {
-    this.arr = [];
+    this.arr = []; // 빈 array를 가지고 있고 각 인덱스마다 연결리스트로 구성되어 (key, value)값을 저장함
     for(let i = 0; i< 10; i++) {
       this.arr[i] = new DoublyLinkedList(); // 반 공간으로 생성, 초기화
     }
