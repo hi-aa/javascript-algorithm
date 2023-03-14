@@ -31,6 +31,18 @@ class BinaryTree {
     this.rightSubTree = tree;
   }
 
+  // 자식 노드를 제거
+  removeLeftSubTree() {
+    let deletingNode = this.getLeftSubTree();
+    this.setLeftSubTree(null);
+    return deletingNode;
+  }
+  removeRigntSubTree() {
+    let deletingNode = this.getRightSubTree();
+    this.setRightSubTree(null);
+    return deletingNode;
+  }
+
   // 트리의 모든 데이터를 출력하려 함
   // 전위순회(루트노드-왼쪽자식-오른쪽자식 순) 방식으로 재귀호출을 이용하여 출력함
   preOrderTraversal(tree) {
